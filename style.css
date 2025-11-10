@@ -60,7 +60,8 @@ body {
 
   display: grid;
   place-content: center;
-  margin: 1rem;
+  padding: 1rem;
+  min-height: 100vh;
 
 
    line-height: 1.7;
@@ -83,7 +84,7 @@ body {
   width: 1px;
 }
 
-  
+  p
 .product__title{font-family:"Fraunces", serif;
 font-weight:var(--fw-bold);
 line-height:1;
