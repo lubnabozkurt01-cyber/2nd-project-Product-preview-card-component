@@ -1,0 +1,191 @@
+
+/*import fonts first before doing anything else*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {--light-Green-500: hsl(158, 36%, 37%);
+--dark-Green-700: hsl(158, 42%, 18%);
+
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+
+    --fw-reguler:500;
+    --fw-bold:700;
+}
+
+
+.montserrat{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.fraunces{
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+ font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html,body {
+  height: 100%;
+}
+body {
+  font-size: 0.875rem;
+  background-color: var(--Cream);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--fw-reguler);
+  color: var(--Grey);
+
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+
+
+   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+/*utilities*/
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+  
+.product__title{font-family:"Fraunces", serif;
+font-weight:var(--fw-bold);
+line-height:1;
+
+}
+
+.product-container{ background-color: var(--White);
+border-radius:0.5rem;
+/*add an overflow hidden to prevent image overflow on border radius and so you see all corners clearly*/
+overflow: hidden;
+max-width: 600px;
+display: grid;
+
+
+
+}
+
+
+
+.product__img{}
+
+.product__content{padding:1.5rem;
+display: grid;
+gap:1rem;}
+
+
+.category{transform: uppercase;
+letter-spacing: 0.5rem;
+font-size: 0.75rem;}
+
+.description{}
+
+.flex-group{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+  /*add flex wrap to prevent opverflow */
+  flex-wrap: wrap;
+
+}
+
+
+.current-price{ font-size: 1.5rem;
+font-family:"Fraunces", serif;
+font-weight: var(--fw-bold);
+color:var(--light-Green-500);}
+
+.original-price{
+
+}
+
+
+button{background-color: var(--light-Green-500);
+border-radius: 5px;
+padding:0.825rem;
+cursor: pointer;
+border:none;
+/*to bring the cart icon next to the text, use the inline-flex and align center*/
+display: inline-flex;
+align-items: center;
+justify-content: center;
+color:var(--White);
+font-weight: var(--fw-bold);
+font-size: 0.925rem;
+gap: 0.85rem;
+}
+
+.button:is(:hover,:focus){
+  background-color: var(--dark-Green-700);
+
+  
+}
+
+
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
