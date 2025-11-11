@@ -93,7 +93,7 @@ body {
   border-radius: 0.5rem;
   /*add an overflow hidden to prevent image overflow on border radius and so you see all corners clearly*/
   overflow: hidden;
- 
+  max-width: 600px;   
   display: grid;
 }
 
@@ -132,7 +132,7 @@ body {
 button {
   background-color: var(--light-Green-500);
   border-radius: 5px;
-  padding: 0.5rem;  1.5rem;
+  padding: 0.2rem;  1.5rem;
   cursor: pointer;
   border: none;
   /*to bring the cart icon next to the text, use the inline-flex and align center*/
